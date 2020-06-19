@@ -3,7 +3,7 @@
 from rearrange import rearrange_name
 import unittest
 
-class TestRearrange(unittest, TestCase):
+class TestRearrange(unittest.TestCase):
 	def test_basic(self):
 		testcase = "Lovelace, Ada"
 		expected = "Ada Lovelace"
@@ -15,7 +15,7 @@ class TestRearrange(unittest, TestCase):
 		self.assertEqual(rearrange_name(testcase),expected)
 
 	def test_double_name(self):
-		testcase = "Hopperm, Grace M."
+		testcase = "Hopper, Grace M."
 		expected = "Grace M. Hopper"
 		self.assertEqual(rearrange_name(testcase),expected)
 
