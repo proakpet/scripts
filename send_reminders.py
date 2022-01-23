@@ -23,7 +23,7 @@ def message_template(date, title, name):
 	message = email.message.EmailMessage()
 	weekday = dow(date)
 	message['Subject'] = f'Meeting reminder: "{title}"'
-	message.setcontent(f '''
+	message.set_content(f'''
 	Hi {name}!
 
 	This is a quick mail to remind you all that we have a meeting about:
